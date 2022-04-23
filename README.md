@@ -11,4 +11,4 @@
 
 ## License
 
-これらのコードは [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.ja) で許諾されています。すなわち、商用利用・非商用利用を問わず、引用元に記載せずに、これらのコードの一部または全部を使用できます。
+これらのコードは [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.ja) で許諾されています。すなわち、引用元に記載せずに、これらのコードの一部または全部を使用できます。
