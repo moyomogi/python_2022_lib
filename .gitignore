@@ -1,0 +1,15 @@
+# Directory
+out
+
+/.vscode
+/bin
+/book
+
+# File
+*.Identifier
+*.log
+*.pdf
+
+/.editorconfig
+/cptest.sh
+/input.md
