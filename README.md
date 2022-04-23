@@ -7,7 +7,7 @@
 
 ## リンク
 
-- [algebra/complex.html](https://github.com/moyomogi/python_2022_lib/algebra/complex.html)
+- [algebra/complex](https://moyomogi.github.io/python_2022_lib/algebra/complex)
 
 ## License
 
