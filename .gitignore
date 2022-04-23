@@ -4,6 +4,8 @@ out
 /.vscode
 /bin
 /book
+/docs/**
+!/docs/_config.yml
 
 # File
 *.Identifier
