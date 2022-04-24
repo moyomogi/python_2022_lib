@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Description:
-#   lib/algebra/complex.py を用いて、docs/_notes/algebra/complex.md を生成。
+#   lib/algebra/complex.py を用いて、dist/_notes/algebra/complex.md を生成。
 # Usage:
 #   $ python3 generate_docs.py
 import glob
@@ -8,8 +8,8 @@ import os
 import sys
 
 lib_folder = "lib/"
-notes_folder = "docs/_notes/"
-pages_folder = "docs/_pages/"
+notes_folder = "dist/_notes/"
+pages_folder = "dist/_pages/"
 github_base_url = "https://moyomogi.github.io/python_2022_lib/"
 
 # YAML front matter
@@ -50,12 +50,12 @@ for file_path in file_paths:
         }
         notes.append(note)
 
-        # Create docs/_notes/algebra
+        # Create dist/_notes/algebra
         if not os.path.exists(f"{notes_folder}{par_dir}"):
             os.mkdir(f"{notes_folder}{par_dir}")
 
 
-# Write docs/_pages/index.md
+# Write dist/_pages/index.md
 with open(f"{pages_folder}index.md", "w") as f:
     print(yaml_front_matter, file=f)
     print(file=f)
@@ -74,7 +74,7 @@ with open(f"{pages_folder}index.md", "w") as f:
         file=f,
     )
 
-# Write docs/_notes/*/*.md
+# Write dist/_notes/*/*.md
 for note in notes:
     lines = note["lines"]
     par_dir = note["par_dir"]
@@ -82,7 +82,7 @@ for note in notes:
     file_base_name = note["file_base_name"]
     link_name = note["link_name"]
 
-    # Write docs/_notes/algebra/complex.md
+    # Write dist/_notes/algebra/complex.md
     with open(f"{notes_folder}{link_name}.md", "w") as f_docs:
         # YAML front matter
         print("---", file=f_docs)
