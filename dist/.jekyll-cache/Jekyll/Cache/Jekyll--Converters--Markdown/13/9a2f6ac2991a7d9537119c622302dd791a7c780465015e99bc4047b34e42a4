@@ -1,7 +1,0 @@
-I"¤<h1 id="algebracomplex">algebra/complex</h1>
-<p>```py
-class Complex:
-    def <strong>init</strong>(self, re=0, im=0):
-        self.re = re
-        self.im = im</p>
-:ET

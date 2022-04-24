@@ -4,15 +4,15 @@ out
 /.vscode
 /bin
 /book
-/docs/*
-!/docs/_includes
-/docs/_includes/notes_graph.json
-!/docs/_layouts
-!/docs/_plugins
-!/docs/_sass
-!/docs/404.html
-!/docs/Gemfile
-!/docs/styles.scss
+/dist/*
+!/dist/_includes
+/dist/_includes/notes_graph.json
+!/dist/_layouts
+!/dist/_plugins
+!/dist/_sass
+!/dist/404.html
+!/dist/Gemfile
+!/dist/styles.scss
 
 # File
 *.Identifier

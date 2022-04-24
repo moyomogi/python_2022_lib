@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 # Description:
-#   lib/algebra/complex.py を用いて、dist/_notes/algebra/complex.md を生成。
+#   lib/algebra/complex.py を元に、
+#   dist/_notes/index.md
+#   dist/_notes/algebra/complex.md を生成。
 # Usage:
 #   $ python3 generate_docs.py
 import glob
