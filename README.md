@@ -5,9 +5,8 @@
 
 競技プログラミング用のライブラリ (Python)
 
-## リンク
-
-- [algebra/complex](https://moyomogi.github.io/python_2022_lib/algebra/complex)
+## 使用したテンプレート
+[maximevaillancourt/digital-garden-jekyll-template](https://github.com/maximevaillancourt/digital-garden-jekyll-template)
 
 ## License
 

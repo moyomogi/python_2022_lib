@@ -4,8 +4,13 @@ out
 /.vscode
 /bin
 /book
-/docs/**
-!/docs/_config.yml
+/docs/*
+!/docs/_includes
+!/docs/_layouts
+!/docs/_plugins
+!/docs/_sass
+!/docs/404.html
+!/docs/styles.scss
 
 # File
 *.Identifier
