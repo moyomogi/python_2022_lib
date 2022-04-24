@@ -38,14 +38,14 @@ for file_path in file_paths:
         split = file_path.split("/")
         print("split:", split, file=sys.stderr)
 
-        par_dir = split[-2]  # algebra
+        par_folder = split[-2]  # algebra
         file_name = split[-1]  # complex.py
         file_base_name = file_name[:-3]  # complex
-        link_name = f"{par_dir}/{file_base_name}"
+        link_name = f"{par_folder}/{file_base_name}"
 
         note = {
             "lines": lines,
-            "par_dir": par_dir,
+            "par_folder": par_folder,
             "file_name": file_name,
             "file_base_name": file_base_name,
             "link_name": link_name,
@@ -53,8 +53,8 @@ for file_path in file_paths:
         notes.append(note)
 
         # Create dist/_notes/algebra
-        if not os.path.exists(f"{notes_folder}{par_dir}"):
-            os.mkdir(f"{notes_folder}{par_dir}")
+        if not os.path.exists(f"{notes_folder}{par_folder}"):
+            os.mkdir(f"{notes_folder}{par_folder}")
 
 
 # Write dist/_pages/index.md
@@ -79,7 +79,7 @@ with open(f"{pages_folder}index.md", "w") as f:
 # Write dist/_notes/*/*.md
 for note in notes:
     lines = note["lines"]
-    par_dir = note["par_dir"]
+    par_folder = note["par_folder"]
     file_name = note["file_name"]
     file_base_name = note["file_base_name"]
     link_name = note["link_name"]
@@ -94,6 +94,8 @@ for note in notes:
         print(file=f_docs)
 
         print(f"# {link_name}", file=f_docs)
+        # https://github.com/moyomogi/python_2022_lib/blob/master/lib/algebra/complex.py
+        print(f"[View on GitHub]({github_base_url}blob/master/{lib_folder}{par_folder}/{file_name})", file=f_docs)
         print("```py", file=f_docs)
         for line in lines:
             print(line, file=f_docs, end="")
@@ -106,4 +108,3 @@ for note in notes:
             # - [algebra/complex](https://moyomogi.github.io/python_2022_lib/algebra/complex)
             # print(f"- [{link_name}]({github_base_url}{link_name})", file=f_docs)
             print(f"- [[{link_name}]]", file=f_docs)
-        print(file=f_docs)
