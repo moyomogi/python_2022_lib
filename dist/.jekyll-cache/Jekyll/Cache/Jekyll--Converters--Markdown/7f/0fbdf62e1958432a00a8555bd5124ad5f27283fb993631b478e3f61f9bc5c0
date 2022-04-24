@@ -1,0 +1,31 @@
+I"5<h1 id="algebracomplex">algebra/complex</h1>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Complex</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">re</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">im</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">re</span> <span class="o">=</span> <span class="n">re</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">im</span> <span class="o">=</span> <span class="n">im</span>
+
+    <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Complex</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">re</span> <span class="o">+</span> <span class="n">c</span><span class="p">.</span><span class="n">re</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">im</span> <span class="o">+</span> <span class="n">c</span><span class="p">.</span><span class="n">im</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Complex</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">re</span> <span class="o">*</span> <span class="n">c</span><span class="p">.</span><span class="n">re</span> <span class="o">-</span> <span class="bp">self</span><span class="p">.</span><span class="n">im</span> <span class="o">*</span> <span class="n">c</span><span class="p">.</span><span class="n">im</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">re</span> <span class="o">*</span> <span class="n">c</span><span class="p">.</span><span class="n">im</span> <span class="o">+</span> <span class="bp">self</span><span class="p">.</span><span class="n">im</span> <span class="o">*</span> <span class="n">c</span><span class="p">.</span><span class="n">re</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__iadd__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">re</span> <span class="o">+=</span> <span class="n">c</span><span class="p">.</span><span class="n">re</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">im</span> <span class="o">+=</span> <span class="n">c</span><span class="p">.</span><span class="n">im</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__imul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">re</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">im</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">re</span> <span class="o">*</span> <span class="n">c</span><span class="p">.</span><span class="n">re</span> <span class="o">-</span> <span class="bp">self</span><span class="p">.</span><span class="n">im</span> <span class="o">*</span> <span class="n">c</span><span class="p">.</span><span class="n">im</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">re</span> <span class="o">*</span> <span class="n">c</span><span class="p">.</span><span class="n">im</span> <span class="o">+</span> <span class="bp">self</span><span class="p">.</span><span class="n">im</span> <span class="o">*</span> <span class="n">c</span><span class="p">.</span><span class="n">re</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">re</span><span class="si">}</span><span class="s"> + </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">im</span><span class="si">}</span><span class="s">i"</span>
+</code></pre></div></div>
+
+<h2 id="リンク">リンク</h2>
+<ul>
+  <li><a class="internal-link" href="/complex">algebra/complex</a></li>
+</ul>
+
+:ET

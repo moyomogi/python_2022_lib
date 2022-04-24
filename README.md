@@ -1,4 +1,4 @@
-[![GitHub Pages](https://img.shields.io/static/v1?label=GitHub+Pages&message=+&color=brightgreen&logo=github)](https://moyomogi.github.io/python_2022_lib/)
+[![netlify](https://img.shields.io/badge/netlify-python--2022--lib-3bb)](python-2022-lib.netlify.app/)
 [![license](https://img.shields.io/badge/license-CC0--1.0-blue)](https://github.com/moyomogi/python_2022_lib/blob/master/LICENSE)
 
 # 🐍 python_2022_lib
