@@ -2,14 +2,13 @@
   <meta charset="UTF-8" />
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="{{ site.baseurl }}/assets/favicon.ico" type="image/vnd.microsoft.icon" />
   <meta
     name="description"
     content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}"
   />
   <meta property="og:site_name" content="{{ site.title }}" />
-  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=" />
   <link rel="stylesheet" href="{{ site.baseurl }}/styles.css" />
+  <link rel="icon" href="assets/favicon.ico" type="image/vnd.microsoft.icon" />
 
   {% if page.excerpt %}
   <meta
