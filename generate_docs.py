@@ -12,7 +12,7 @@ import sys
 lib_folder = "lib/"
 notes_folder = "dist/_notes/"
 pages_folder = "dist/_pages/"
-github_base_url = "https://moyomogi.github.io/python_2022_lib/"
+github_base_url = "https://github.com/moyomogi/python_2022_lib"
 
 # YAML front matter
 yaml_front_matter = """---
@@ -66,7 +66,7 @@ with open(f"{pages_folder}index.md", "w") as f:
     for note in notes:
         link_name = note["link_name"]
         # - [algebra/complex](https://moyomogi.github.io/python_2022_lib/algebra/complex)
-        # print(f"- [{link_name}]({github_base_url}{link_name})", file=f)
+        # print(f"- [{link_name}]({par_folder}/{file_name})", file=f)
         print(f"- [[{link_name}]]", file=f)
     print(file=f)
 
@@ -95,7 +95,7 @@ for note in notes:
 
         print(f"# {link_name}", file=f_docs)
         # https://github.com/moyomogi/python_2022_lib/blob/master/lib/algebra/complex.py
-        print(f"[View on GitHub]({github_base_url}blob/master/{lib_folder}{par_folder}/{file_name})", file=f_docs)
+        print(f"[View on GitHub]({github_base_url}/blob/master/{lib_folder}{par_folder}/{file_name})", file=f_docs)
         print("```py", file=f_docs)
         for line in lines:
             print(line, file=f_docs, end="")
@@ -106,5 +106,5 @@ for note in notes:
         # for note in notes:
         #     link_name = note["link_name"]
         #     # - [algebra/complex](https://moyomogi.github.io/python_2022_lib/algebra/complex)
-        #     # print(f"- [{link_name}]({github_base_url}{link_name})", file=f_docs)
+        #     # print(f"- [{link_name}]({par_folder}/{file_name})", file=f_docs)
         #     print(f"- [[{link_name}]]", file=f_docs)
