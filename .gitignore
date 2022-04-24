@@ -10,6 +10,7 @@ out
 !/docs/_plugins
 !/docs/_sass
 !/docs/404.html
+!/docs/Gemfile
 !/docs/styles.scss
 
 # File
