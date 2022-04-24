@@ -11,6 +11,7 @@ lang: ja
 # Specifically, when using GitHub Pages, the baseurl should point to where GitHub
 # Pages deploys your repository (which is usually the repository name).
 baseurl: "python_2022_lib"
+# baseurl: ""
 
 # If you are using a host that cannot resolve URLs that do
 # not end with .html (such as Neocities), set this to 'true'.
@@ -29,10 +30,7 @@ permalink: pretty
 relative_permalinks: false
 
 plugins:
-  - jemoji
   - jekyll-last-modified-at
-  - jekyll-remote-theme
-  # - jekyll-relative-links
 # theme: jekyll-theme-minimal
 
 sass:
@@ -43,10 +41,6 @@ collections:
   notes:
     output: true
     permalink: /:slug
-
-# relative_links:
-#   enabled: true
-#   collections: true
 
 defaults:
   - scope:

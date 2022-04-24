@@ -6,6 +6,7 @@ out
 /book
 /docs/*
 !/docs/_includes
+/docs/_includes/notes_graph.json
 !/docs/_layouts
 !/docs/_plugins
 !/docs/_sass

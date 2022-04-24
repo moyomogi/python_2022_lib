@@ -86,6 +86,7 @@ for note in notes:
     with open(f"{notes_folder}{link_name}.md", "w") as f_docs:
         # YAML front matter
         print("---", file=f_docs)
+        print("layout: note", file=f_docs)
         print(f"title: {link_name}", file=f_docs)
         print("---", file=f_docs)
         print(file=f_docs)
