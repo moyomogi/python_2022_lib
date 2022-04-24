@@ -102,9 +102,9 @@ for note in notes:
         print("```", file=f_docs)
         print(file=f_docs)
 
-        print("## リンク", file=f_docs)
-        for note in notes:
-            link_name = note["link_name"]
-            # - [algebra/complex](https://moyomogi.github.io/python_2022_lib/algebra/complex)
-            # print(f"- [{link_name}]({github_base_url}{link_name})", file=f_docs)
-            print(f"- [[{link_name}]]", file=f_docs)
+        # print("## リンク", file=f_docs)
+        # for note in notes:
+        #     link_name = note["link_name"]
+        #     # - [algebra/complex](https://moyomogi.github.io/python_2022_lib/algebra/complex)
+        #     # print(f"- [{link_name}]({github_base_url}{link_name})", file=f_docs)
+        #     print(f"- [[{link_name}]]", file=f_docs)
