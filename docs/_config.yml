@@ -10,8 +10,8 @@ lang: ja
 # You may need to change the base URL depending on your deploy configuration.
 # Specifically, when using GitHub Pages, the baseurl should point to where GitHub
 # Pages deploys your repository (which is usually the repository name).
-baseurl: "python_2022_lib"
-# baseurl: ""
+# baseurl: "python_2022_lib"
+baseurl: ""
 
 # If you are using a host that cannot resolve URLs that do
 # not end with .html (such as Neocities), set this to 'true'.
