@@ -1,5 +1,5 @@
 # Directory
-out
+__pycache__
 
 /.vscode
 /bin
@@ -10,6 +10,7 @@ out
 !/dist/_layouts
 !/dist/_plugins
 !/dist/_sass
+!/dist/assets
 !/dist/404.html
 !/dist/Gemfile
 !/dist/styles.scss

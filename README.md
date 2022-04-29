@@ -8,7 +8,34 @@
 [Library](https://python-2022-lib.netlify.app/)
 
 ## 使用したテンプレート
+
 [maximevaillancourt/digital-garden-jekyll-template](https://github.com/maximevaillancourt/digital-garden-jekyll-template)
+
+
+## localhost にサーブする方法
+[Setup digital-garden-with-jekyll](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll) を参考にしました。
+
+必要なツールをインストール (初回のみ実行すればよい)。
+```sh
+# jekyll は ruby で実装されているので ruby をインストール。
+sudo apt install -y ruby-dev ruby-bundler
+gem install jekyll
+```
+
+以下を実行すれば、lib 配下を [localhost:4000](http://localhost:4000) にサーブできる。
+```sh
+# lib 配下のファイルを参照し、
+# dist/_notes, dist/_pages 配下に Markdown 生成。
+python3 generate_docs.py
+cd dist
+
+# dist/_notes, dist/_pages 配下のファイルを参照し、
+# dist/_site 配下に html などを生成。
+sudo bundle
+# dist/_site 配下のファイルを
+# http://localhost:4000 にサーブする。
+sudo bundle exec jekyll serve
+```
 
 ## License
 
