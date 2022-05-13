@@ -1,0 +1,76 @@
+<head>
+  <meta charset="UTF-8" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}"
+  />
+  <meta property="og:site_name" content="{{ site.title }}" />
+
+  <!--
+    Webの数式表現
+    http://www.ic.daito.ac.jp/~mizutani/html/mathexpress.html
+  -->
+  <!--
+    GitHub Pages + Jekyll で作成する文書に TeX 数式を埋める
+    https://chirimenmonster.github.io/2016/01/27/tex-equation.html
+    プロトコル部分 http: を削除すれば HTML ドキュメントを読み込んだときと
+    同じプロトコルで MathJax を読みにいく。
+    幸い cdn.mathjax.org は https でもアクセスできる。
+  -->
+  <script
+    type="text/javascript"
+    src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+  ></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: { equationNumbers: { autoNumber: "AMS" }},
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+      "HTML-CSS": { matchFontHeight: false },
+      displayAlign: "left",
+      displayIndent: "2em"
+    });
+  </script>
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/styles.css" />
+  <link rel="icon" href="assets/favicon.ico" type="image/vnd.microsoft.icon" />
+
+  {% if page.excerpt %}
+  <meta
+    property="og:description"
+    content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}"
+  />
+  {% else %}
+  <meta
+    property="og:description"
+    content="{{ site.title | strip_html | strip_newlines | truncate: 160 }}"
+  />
+  {% endif %} {% if page.title %}
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:type" content="article" />
+  {% else %}
+  <meta property="og:title" content="{{ site.title }}" />
+  <meta property="og:type" content="website" />
+  {% endif %} {% if page.date %}
+  <meta
+    property="article:published_time"
+    content="{{ page.date | date_to_xmlschema }}"
+  />
+  <meta property="article:author" content="{{ site.url }}/" />
+  {% endif %}
+
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+
+  {% if page.image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
+  {% endif %}
+
+  <title>
+    {% if page.id == "home" %} {{ site.title }} {% else %} {{ page.title }}
+    &mdash; {{ site.title }} {% endif %}
+  </title>
+</head>
