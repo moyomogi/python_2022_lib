@@ -24,7 +24,7 @@ gem install jekyll
 ```sh
 # lib 配下のファイルを参照し、
 # dist/_notes, dist/_pages 配下に Markdown 生成。
-python3 generate_docs.py
+python3 generate_notes.py
 cd dist
 
 # dist/_notes, dist/_pages 配下のファイルを参照し、
@@ -41,7 +41,7 @@ sudo bundle exec jekyll serve
 
 ## License
 
-- `lib` 配下のコードは [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.ja) で許諾されています。すなわち、引用元に記載せずに、これらのコードの一部または全部を使用できます。
-- `dist` 配下のコードは、使用したテンプレート [maximevaillancourt/digital-garden-jekyll-template] のライセンスである [MIT](https://github.com/maximevaillancourt/digital-garden-jekyll-template/blob/master/LICENSE) を継承します。すなわち、`dist` 配下のコードの一部または全部を用いた場合は [maximevaillancourt/digital-garden-jekyll-template] を利用した旨を記載する必要があります。
+- `docs`, `lib` 配下のファイルは [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.ja) で許諾されています。すなわち、引用元に記載せずに、これらのファイルの一部または全部を使用できます。
+- `dist` 配下のファイルは、使用したテンプレート [maximevaillancourt/digital-garden-jekyll-template] のライセンスである [MIT](https://github.com/maximevaillancourt/digital-garden-jekyll-template/blob/master/LICENSE) を継承します。すなわち、`dist` 配下のファイルの一部または全部を用いた場合は [maximevaillancourt/digital-garden-jekyll-template] を利用した旨を記載する必要があります。
 
 [maximevaillancourt/digital-garden-jekyll-template]: https://github.com/maximevaillancourt/digital-garden-jekyll-template

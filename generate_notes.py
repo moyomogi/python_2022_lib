@@ -4,7 +4,7 @@
 #   dist/_notes/index.md
 #   dist/_notes/algebra/complex.md を生成。
 # Usage:
-#   $ python3 generate_docs.py
+#   $ python3 generate_notes.py
 import glob
 import os
 import sys
@@ -105,10 +105,10 @@ for note in notes:
 
         print(f"# {link_name}", file=f_notes)
         print(file=f_notes)
+        print("".join(docs_lines).strip(), file=f_notes)
+        print(file=f_notes)
         # https://github.com/moyomogi/python_2022_lib/blob/master/lib/algebra/complex.py
         print(f"[View on GitHub]({github_base_url}/blob/master/{lib_folder}{par_folder}/{file_name})", file=f_notes)
-        print(file=f_notes)
-        print("".join(docs_lines).strip(), file=f_notes)
         print(file=f_notes)
         print("```py", file=f_notes)
         print("".join(lib_lines).strip(), file=f_notes)
