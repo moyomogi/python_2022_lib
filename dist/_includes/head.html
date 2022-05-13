@@ -7,6 +7,25 @@
     content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}"
   />
   <meta property="og:site_name" content="{{ site.title }}" />
+
+  <!-- Ref: http://www.ic.daito.ac.jp/~mizutani/html/mathexpress.html -->
+  <script
+    type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+  ></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: { equationNumbers: { autoNumber: "AMS" }},
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+      "HTML-CSS": { matchFontHeight: false },
+      displayAlign: "left",
+      displayIndent: "2em"
+    });
+  </script>
+
   <link rel="stylesheet" href="{{ site.baseurl }}/styles.css" />
   <link rel="icon" href="assets/favicon.ico" type="image/vnd.microsoft.icon" />
 

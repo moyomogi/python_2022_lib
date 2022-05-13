@@ -10,6 +10,7 @@ import os
 import sys
 
 lib_folder = "lib/"
+docs_folder = "docs/"
 notes_folder = "dist/_notes/"
 pages_folder = "dist/_pages/"
 github_base_url = "https://github.com/moyomogi/python_2022_lib"
@@ -22,7 +23,7 @@ id: home
 permalink: /
 ---"""
 
-file_paths = glob.glob(f"{lib_folder}*/*.py")
+lib_paths = glob.glob(f"{lib_folder}*/*.py")
 notes = []
 
 
@@ -31,11 +32,10 @@ if not os.path.exists(f"{pages_folder}"):
 if not os.path.exists(f"{notes_folder}"):
     os.mkdir(f"{notes_folder}")
 
-for file_path in file_paths:
-    with open(file_path, "r") as f_lib:
-        lines = f_lib.readlines()
-        print("file_path:", file_path, file=sys.stderr)
-        split = file_path.split("/")
+for lib_path in lib_paths:
+    with open(lib_path, "r") as f_lib:
+        lib_lines = f_lib.readlines()
+        split = lib_path.split("/")
         print("split:", split, file=sys.stderr)
 
         par_folder = split[-2]  # algebra
@@ -43,8 +43,16 @@ for file_path in file_paths:
         file_base_name = file_name[:-3]  # complex
         link_name = f"{par_folder}/{file_base_name}"
 
+        docs_lines = ""
+        docs_path = f"{docs_folder}{link_name}.md"
+        if os.path.isfile(docs_path):
+            with open(docs_path, "r") as f_docs:
+                docs_lines = f_docs.readlines()
+                # RegEx
+
         note = {
-            "lines": lines,
+            "lib_lines": lib_lines,
+            "docs_lines": docs_lines,
             "par_folder": par_folder,
             "file_name": file_name,
             "file_base_name": file_base_name,
@@ -78,29 +86,35 @@ with open(f"{pages_folder}index.md", "w") as f:
 
 # Write dist/_notes/*/*.md
 for note in notes:
-    lines = note["lines"]
+    lib_lines = note["lib_lines"]
+    docs_lines = note["docs_lines"]
     par_folder = note["par_folder"]
     file_name = note["file_name"]
     file_base_name = note["file_base_name"]
     link_name = note["link_name"]
 
     # Write dist/_notes/algebra/complex.md
-    with open(f"{notes_folder}{link_name}.md", "w") as f_docs:
+    with open(f"{notes_folder}{link_name}.md", "w") as f_notes:
         # YAML front matter
-        print("---", file=f_docs)
-        print("layout: page", file=f_docs)
-        print(f"title: {link_name}", file=f_docs)
-        print("---", file=f_docs)
-        print(file=f_docs)
+        print("---", file=f_notes)
+        print("layout: page", file=f_notes)
+        print(f"title: {link_name}", file=f_notes)
+        print("---", file=f_notes)
+        print(file=f_notes)
 
-        print(f"# {link_name}", file=f_docs)
+        print(f"# {link_name}", file=f_notes)
+        print(file=f_notes)
         # https://github.com/moyomogi/python_2022_lib/blob/master/lib/algebra/complex.py
-        print(f"[View on GitHub]({github_base_url}/blob/master/{lib_folder}{par_folder}/{file_name})", file=f_docs)
-        print("```py", file=f_docs)
-        for line in lines:
-            print(line, file=f_docs, end="")
-        print("```", file=f_docs)
-        print(file=f_docs)
+        print(f"[View on GitHub]({github_base_url}/blob/master/{lib_folder}{par_folder}/{file_name})", file=f_notes)
+        print(file=f_notes)
+        print("".join(docs_lines).strip(), file=f_notes)
+        print(file=f_notes)
+        print("```py", file=f_notes)
+        print("".join(lib_lines).strip(), file=f_notes)
+        # for line in lib_lines:
+        #     print(line, file=f_notes, end="")
+        print("```", file=f_notes)
+        print(file=f_notes)
 
         # print("## リンク", file=f_docs)
         # for note in notes:

@@ -1,6 +1,7 @@
 # Directory
 __pycache__
 
+/.jekyll-cache
 /.vscode
 /bin
 /book
