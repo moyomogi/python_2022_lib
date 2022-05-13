@@ -10,9 +10,9 @@ title: data_structures/dsu
 集合を扱うデータ構造。
 - `merge(a, b)`: 要素 `a` の属する集合と要素 `b` の属する集合を併合する。
 - `same(a, b)`: 要素 `a`, `b` が同じ集合に属するかを返す。
-- `find(a)`: 要素 `a` が属するグループの根を返す。
-- `size(a)`: 要素 `a` が属するグループの要素数を返す。
-- `groups()`: 現在の集合の状態をリストを返す。
+- `find(a)`: 要素 `a` が属する集合の根を返す。
+- `size(a)`: 要素 `a` が属する集合の要素数を返す。
+- `groups()`: 現在の集合の状態を表したリストを返す。
 
 ```py
 # https://github.com/not522/ac-library-python/blob/master/atcoder/dsu.py
@@ -85,3 +85,7 @@ class DSU:
         return list(filter(lambda r: r, result))
 ```
 
+## リンク
+- [[algebra/calc_rect_area]]
+- [[algebra/complex]]
+- [[data_structures/dsu]]

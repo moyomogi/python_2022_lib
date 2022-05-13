@@ -34,3 +34,7 @@ class Complex:
         return f"{self.re} + {self.im}i"
 ```
 
+## リンク
+- [[algebra/calc_rect_area]]
+- [[algebra/complex]]
+- [[data_structures/dsu]]
