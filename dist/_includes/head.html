@@ -9,10 +9,16 @@
   <meta property="og:site_name" content="{{ site.title }}" />
 
   <!--
-    Ref:
+    Webの数式表現
     http://www.ic.daito.ac.jp/~mizutani/html/mathexpress.html
   -->
-  <!-- https://chirimenmonster.github.io/2016/01/27/tex-equation.html -->
+  <!--
+    GitHub Pages + Jekyll で作成する文書に TeX 数式を埋める
+    https://chirimenmonster.github.io/2016/01/27/tex-equation.html
+    プロトコル部分 http: を削除すれば HTML ドキュメントを読み込んだときと
+    同じプロトコルで MathJax を読みにいく。
+    幸い cdn.mathjax.org は https でもアクセスできる。
+  -->
   <script
     type="text/javascript"
     src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"

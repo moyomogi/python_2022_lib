@@ -15,17 +15,17 @@ jobs:
           python-version: 3.9
 
       # https://blog.toshimaru.net/jekyll-deploy-with-github-actions/
-      - name: Set up Ruby
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: 2.7
+      # - name: Set up Ruby
+      #   uses: actions/setup-ruby@v1
+      #   with:
+      #     ruby-version: 2.7
 
       - run: python3 generate_docs.py
 
-      - run: |
-          cd dist
-          bundle install
-          bundle exec jekyll build
+      # - run: |
+      #     cd dist
+      #     bundle install
+      #     bundle exec jekyll build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
