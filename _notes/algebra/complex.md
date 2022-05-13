@@ -5,9 +5,9 @@ title: algebra/complex
 
 # algebra/complex
 
-[View on GitHub](https://github.com/moyomogi/python_2022_lib/blob/master/lib/algebra/complex.py)
-
 複素数の計算を行う関数です。計算量はいずれのメソッドも $O(1)$ です。
+
+[View on GitHub](https://github.com/moyomogi/python_2022_lib/blob/master/lib/algebra/complex.py)
 
 ```py
 class Complex:
