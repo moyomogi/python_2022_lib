@@ -8,6 +8,7 @@ permalink: /
 ## リンク
 - [[algebra/calc_rect_area]]
 - [[algebra/complex]]
+- [[data_structures/dsu]]
 
 ## 使用したテンプレート
 [maximevaillancourt/digital-garden-jekyll-template](https://github.com/maximevaillancourt/digital-garden-jekyll-template)
