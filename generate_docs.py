@@ -36,7 +36,7 @@ for lib_path in lib_paths:
     with open(lib_path, "r") as f_lib:
         lib_lines = f_lib.readlines()
         split = lib_path.split("/")
-        print("split:", split, file=sys.stderr)
+        # print("split:", split, file=sys.stderr)
 
         par_folder = split[-2]  # algebra
         file_name = split[-1]  # complex.py
@@ -63,7 +63,7 @@ for lib_path in lib_paths:
         # Create dist/_notes/algebra
         if not os.path.exists(f"{notes_folder}{par_folder}"):
             os.mkdir(f"{notes_folder}{par_folder}")
-
+notes.sort(key=lambda x: x["link_name"])
 
 # Write dist/_pages/index.md
 with open(f"{pages_folder}index.md", "w") as f:
@@ -92,6 +92,7 @@ for note in notes:
     file_name = note["file_name"]
     file_base_name = note["file_base_name"]
     link_name = note["link_name"]
+    print("link_name:", link_name, file=sys.stderr)
 
     # Write dist/_notes/algebra/complex.md
     with open(f"{notes_folder}{link_name}.md", "w") as f_notes:
@@ -116,9 +117,8 @@ for note in notes:
         print("```", file=f_notes)
         print(file=f_notes)
 
-        # print("## リンク", file=f_docs)
-        # for note in notes:
-        #     link_name = note["link_name"]
-        #     # - [algebra/complex](https://moyomogi.github.io/python_2022_lib/algebra/complex)
-        #     # print(f"- [{link_name}]({par_folder}/{file_name})", file=f_docs)
-        #     print(f"- [[{link_name}]]", file=f_docs)
+        print("## リンク", file=f_notes)
+        for note in notes:
+            link_name = note["link_name"]
+            # - [[algebra/complex]]
+            print(f"- [[{link_name}]]", file=f_notes)
